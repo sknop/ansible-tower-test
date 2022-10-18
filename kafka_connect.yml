@@ -4,6 +4,8 @@
   gather_facts: false
   tags: kafka_connect
   environment: "{{ proxy_env }}"
+  collections:
+    - confluent.platform
   tasks:
     - import_role:
         name: variables

@@ -7,6 +7,8 @@
   gather_facts: false
   tags: schema_registry
   environment: "{{ proxy_env }}"
+  collections:
+    - confluent.platform
   tasks:
     - import_role:
         name: schema_registry

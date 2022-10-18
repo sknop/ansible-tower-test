@@ -4,6 +4,8 @@
   gather_facts: false
   tags: ksql
   environment: "{{ proxy_env }}"
+  collections:
+    - confluent.platform
   tasks:
     - import_role:
         name: variables
