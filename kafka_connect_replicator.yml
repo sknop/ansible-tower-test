@@ -29,6 +29,8 @@
   gather_facts: false
   tags: kafka_connect_replicator
   environment: "{{ proxy_env }}"
+  collections:
+    - confluent.platform
   tasks:
     - import_role:
         name: kafka_connect_replicator
@@ -40,6 +42,8 @@
   gather_facts: false
   tags: kafka_connect_replicator
   environment: "{{ proxy_env }}"
+  collections:
+    - confluent.platform
   tasks:
     - import_role:
         name: kafka_connect_replicator

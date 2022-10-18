@@ -29,6 +29,8 @@
   gather_facts: false
   tags: control_center
   environment: "{{ proxy_env }}"
+  collections:
+    - confluent.platform
   tasks:
     - import_role:
         name: control_center
@@ -40,6 +42,8 @@
   gather_facts: false
   tags: control_center
   environment: "{{ proxy_env }}"
+  collections:
+    - confluent.platform
   tasks:
     - import_role:
         name: control_center
